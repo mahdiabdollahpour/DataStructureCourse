@@ -45,6 +45,7 @@ public class InfixAndPrefix {
         } else if (c.equals("+") || c.equals("-")) {
             return 3;
         }
+
         return 0;
     }
 

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83110cba-3e74-4d92-ac6b-27455bca20a3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PostfixAndPrefix.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DataStructureCourseImplementations/InfixAndPrefix.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DataStructureCourseImplementations/InfixAndPrefix.class" afterPath="$PROJECT_DIR$/out/production/DataStructureCourseImplementations/InfixAndPrefix.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InfixAndPrefix.java" afterPath="$PROJECT_DIR$/src/InfixAndPrefix.java" />
     </list>
@@ -46,16 +46,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InfixAndPrefix.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InfixAndPrefix.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/InfixAndPrefix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="114" column="85" lean-forward="false" selection-start-line="114" selection-start-column="85" selection-end-line="114" selection-end-column="85" />
+            <state relative-caret-position="217">
+              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding>
                 <element signature="method#isNumber#0;class#InfixAndPrefix#0" expanded="false" />
                 <element signature="method#isNum#0;class#InfixAndPrefix#0" expanded="false" />
                 <element signature="method#isOp#0;class#InfixAndPrefix#0" expanded="false" />
+                <element signature="method#inToPre#0;class#InfixAndPrefix#0" expanded="false" />
+                <element signature="method#preToIn#0;class#InfixAndPrefix#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataStructureCourseImplementations.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataStructureCourseImplementations.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -113,6 +135,7 @@
         <option value="$PROJECT_DIR$/src/InfixAndPostfix.java" />
         <option value="$PROJECT_DIR$/src/PostfixAndPrefix.java" />
         <option value="$PROJECT_DIR$/src/InfixAndPrefix.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -155,20 +178,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="DataStructureCourseImplementations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataStructureCourseImplementations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataStructureCourseImplementations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -654,12 +663,12 @@
       <workItem from="1507639900893" duration="4364000" />
       <workItem from="1507707594733" duration="2970000" />
       <workItem from="1507726438139" duration="1666000" />
-      <workItem from="1507747189708" duration="6890000" />
+      <workItem from="1507747189708" duration="7590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19146000" />
+    <option name="totallyTimeSpent" value="19846000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -672,7 +681,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -684,9 +693,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.274673" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.274673" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45422116" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26054054" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -742,6 +751,8 @@
             <element signature="method#isNumber#0;class#InfixAndPrefix#0" expanded="false" />
             <element signature="method#isNum#0;class#InfixAndPrefix#0" expanded="false" />
             <element signature="method#isOp#0;class#InfixAndPrefix#0" expanded="false" />
+            <element signature="method#inToPre#0;class#InfixAndPrefix#0" expanded="false" />
+            <element signature="method#preToIn#0;class#InfixAndPrefix#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -776,6 +787,8 @@
             <element signature="method#isNumber#0;class#InfixAndPrefix#0" expanded="false" />
             <element signature="method#isNum#0;class#InfixAndPrefix#0" expanded="false" />
             <element signature="method#isOp#0;class#InfixAndPrefix#0" expanded="false" />
+            <element signature="method#inToPre#0;class#InfixAndPrefix#0" expanded="false" />
+            <element signature="method#preToIn#0;class#InfixAndPrefix#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -810,6 +823,8 @@
             <element signature="method#isNumber#0;class#InfixAndPrefix#0" expanded="false" />
             <element signature="method#isNum#0;class#InfixAndPrefix#0" expanded="false" />
             <element signature="method#isOp#0;class#InfixAndPrefix#0" expanded="false" />
+            <element signature="method#inToPre#0;class#InfixAndPrefix#0" expanded="false" />
+            <element signature="method#preToIn#0;class#InfixAndPrefix#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -882,13 +897,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/InfixAndPrefix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="114" column="85" lean-forward="false" selection-start-line="114" selection-start-column="85" selection-end-line="114" selection-end-column="85" />
+        <state relative-caret-position="217">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
             <element signature="method#isNumber#0;class#InfixAndPrefix#0" expanded="false" />
             <element signature="method#isNum#0;class#InfixAndPrefix#0" expanded="false" />
             <element signature="method#isOp#0;class#InfixAndPrefix#0" expanded="false" />
+            <element signature="method#inToPre#0;class#InfixAndPrefix#0" expanded="false" />
+            <element signature="method#preToIn#0;class#InfixAndPrefix#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataStructureCourseImplementations.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
