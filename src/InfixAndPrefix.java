@@ -12,6 +12,15 @@ import java.util.Stack;
  */
 public class InfixAndPrefix {
 
+    public static boolean isNumber(String s) {
+        for (int i = 0; i < s.length(); i++) {
+            if (!isNum(s.charAt(i))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static boolean isNum(char c) {
         int ascii = (int) c;
         if (ascii < 48) {
@@ -23,17 +32,17 @@ public class InfixAndPrefix {
         return true;
     }
 
-    public static boolean isOp(char c) {
-        if (c == '+' | c == '-' | c == '*' | c == '/') {
+    public static boolean isOp(String c) {
+        if (c.equals("+") | c.equals("-") | c.equals("*") | c.equals("/")) {
             return true;
         }
         return false;
     }
 
-    public static int precedense(char c) {
-        if (c == '*' || c == '/') {
+    public static int precedense(String c) {
+        if (c.equals("*") || c.equals("/")) {
             return 7;
-        } else if (c == '+' || c == '-') {
+        } else if (c.equals("+") || c.equals("-")) {
             return 3;
         }
         return 0;
@@ -41,36 +50,37 @@ public class InfixAndPrefix {
 
 
     public static String inToPre(String input) {
-        Stack<Character> operatorStack = new Stack<>();
+        input = input.concat(" )");
+        String[] arr = input.split(" ");
+        Stack<String> operatorStack = new Stack<>();
         Stack<String> numbersStack = new Stack<>();
-        operatorStack.add('(');
-        input = input.concat(")");
-        for (int i = 0; i < input.length(); i++) {
-            char c = input.charAt(i);
+        operatorStack.add("(");
+        for (int i = 0; i < arr.length; i++) {
+            String c = arr[i];
 
-
-            if (c == '(') {
+            if (c.equals("(")) {
                 operatorStack.add(c);
-            } else if (c == ')') {
+            } else if (c.equals(")")) {
 
-                char OPERATOR = operatorStack.pop();
+                String OPERATOR = operatorStack.pop();
 
-                while (OPERATOR != '(') {
+                while (!OPERATOR.equals("(")) {
                     String OPERAND1 = numbersStack.pop();
                     String OPERAND2 = numbersStack.pop();
-                    String newElement = Character.toString(OPERATOR).concat(OPERAND1).concat(OPERAND2);
+                    String newElement = OPERATOR + " " + OPERAND1 + " " + OPERAND2;
                     numbersStack.add(newElement);
                     OPERATOR = operatorStack.pop();
 
                 }
             } else if (isOp(c)) {
-                char op = operatorStack.pop();
+                String op = operatorStack.pop();
                 boolean higherOrEqualPrecedense = precedense(op) >= precedense(c);
                 while (higherOrEqualPrecedense) {
 
                     String OPERAND1 = numbersStack.pop();
                     String OPERAND2 = numbersStack.pop();
-                    String newElement = Character.toString(op).concat(OPERAND1).concat(OPERAND2);
+
+                    String newElement = op + " " + OPERAND1 + " " + OPERAND2;
                     numbersStack.add(newElement);
                     op = operatorStack.pop();
                     higherOrEqualPrecedense = precedense(op) >= precedense(c);
@@ -82,7 +92,7 @@ public class InfixAndPrefix {
 
 
             } else {
-                numbersStack.add(Character.toString(c));
+                numbersStack.add(c);
             }
 
 
@@ -92,10 +102,30 @@ public class InfixAndPrefix {
 
     }
 
+    public static String preToIn(String input) {
+        String[] arr = input.split(" ");
+        Stack<String> stack = new Stack<>();
+        for (int i = arr.length - 1; i >= 0; i--) {
+            String c = arr[i];
+            if (isNumber(c)) {
+                stack.add(c);
+            } else if (isOp(c)) {
+                String operand1 = stack.pop();
+                String operand2 = stack.pop();
+                String newElemet = " ( " + operand1 + " " + c + " " + operand2 + " ) ";
+                stack.add(newElemet);
+            }
+
+        }
+        return stack.pop();
+
+    }
 
     public static void main(String[] args) {
-
-        //    System.out.println(infixToPreReversing("((3+4)*(6+7))/9"));
-        System.out.println(inToPre("(2+3)*(5-1)"));
+        String infix = "( 2 + 3 ) * ( 8 - 4 )";
+        String pre = inToPre(infix);
+        System.out.println(pre);
+        String in = preToIn(pre);
+        System.out.println(in);
     }
 }
