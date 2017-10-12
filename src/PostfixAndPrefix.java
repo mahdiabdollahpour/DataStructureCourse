@@ -25,7 +25,6 @@ public class PostfixAndPrefix {
     }
 
 
-
     public static boolean isOp(String c) {
         if (c.equals("+") | c.equals("-") | c.equals("*") | c.equals("/")) {
             return true;
@@ -46,7 +45,7 @@ public class PostfixAndPrefix {
             } else if (isOp(c)) {
                 String operand1 = s.pop();
                 String operand2 = s.pop();
-                String newElement = c + " " + operand1 + " " + operand2;
+                String newElement = c + " " + operand2 + " " + operand1;
                 s.add(newElement);
             }
         }
@@ -62,7 +61,7 @@ public class PostfixAndPrefix {
         Stack<String> s = new Stack<>();
         for (int i = arr.length - 1; i >= 0; i--) {
             String c = arr[i];
-       //     System.out.print(c);
+            //     System.out.print(c);
             if (isNumber(c)) {
                 s.add(c);
             } else if (isOp(c)) {
@@ -72,7 +71,7 @@ public class PostfixAndPrefix {
                 s.add(newElement);
             }
         }
-   //     System.out.println();
+        //     System.out.println();
         return s.pop();
 
 
@@ -80,8 +79,11 @@ public class PostfixAndPrefix {
 
 
     public static void main(String[] args) {
-        // System.out.println(postToPre("2 3 +"));
-        System.out.println(preToPost("+ 3 2"));
+        String pre = "* + 3 2 - 8 4 ";
+        String post = preToPost(pre);
+        System.out.println(post);
+        String preback = postToPre(post);
+        System.out.println(preback);
 
     }
 

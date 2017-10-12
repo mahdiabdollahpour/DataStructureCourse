@@ -68,7 +68,7 @@ public class InfixAndPrefix {
                 while (!OPERATOR.equals("(")) {
                     String OPERAND1 = numbersStack.pop();
                     String OPERAND2 = numbersStack.pop();
-                    String newElement = OPERATOR + " " + OPERAND1 + " " + OPERAND2;
+                    String newElement = OPERATOR + " " + OPERAND2 + " " + OPERAND1;
                     numbersStack.add(newElement);
                     OPERATOR = operatorStack.pop();
 
@@ -81,7 +81,7 @@ public class InfixAndPrefix {
                     String OPERAND1 = numbersStack.pop();
                     String OPERAND2 = numbersStack.pop();
 
-                    String newElement = op + " " + OPERAND1 + " " + OPERAND2;
+                    String newElement = op + " " + OPERAND2 + " " + OPERAND1;
                     numbersStack.add(newElement);
                     op = operatorStack.pop();
                     higherOrEqualPrecedense = precedense(op) >= precedense(c);

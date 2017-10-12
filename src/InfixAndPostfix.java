@@ -44,10 +44,11 @@ public class InfixAndPostfix {
         return true;
     }
 
-    public static void printOp(StringBuilder sb,char c) {
+    public static void addOp(StringBuilder sb, char c) {
         if (c != '(') {
+            sb.append(" ");
             sb.append(c);
-           // System.out.print(c);
+            // System.out.print(c);
         }
     }
 
@@ -58,8 +59,9 @@ public class InfixAndPostfix {
         for (int i = 0; i < input.length(); i++) {
             char c = input.charAt(i);
             if (isNum(c)) {
+                sb.append(" ");
                 sb.append(c);
-           //     System.out.print(c);
+                //     System.out.print(c);
             } else if (isOp(c)) {
                 if (s.empty()) {
                     s.add(c);
@@ -71,17 +73,17 @@ public class InfixAndPostfix {
                     s.add(c);
                 } else {
 
-                    printOp(sb,in);
+                    addOp(sb, in);
                     while (isp(in) < icp(c) && !s.empty()) {
                         in = s.pop();
-                        printOp(sb,in);
+                        addOp(sb, in);
                     }
                     s.add(c);
                 }
             } else if (c == ')') {
                 while (!s.empty()) {
                     char a = s.pop();
-                    printOp(sb,a);
+                    addOp(sb, a);
                 }
             }
 
@@ -89,7 +91,7 @@ public class InfixAndPostfix {
         }
         while (!s.empty()) {
             char a = s.pop();
-            printOp(sb,a);
+            addOp(sb, a);
         }
         return sb.toString();
 
@@ -106,7 +108,7 @@ public class InfixAndPostfix {
             } else if (isOp(c)) {
                 String a = s.pop();
                 String b = s.pop();
-                String result = "(" + b + c + a + ")";
+                String result = " ( " + b + " " + c + " " + a + " ) ";
                 s.add(result);
             }
 
@@ -118,8 +120,13 @@ public class InfixAndPostfix {
 
 
     public static void main(String[] args) {
-        // infixToPostfix("(2-5)*7+(3/8)");
-        System.out.println(postfixToInfix("23+45-*"));
+        String infix = " ( 2 + 3 ) * ( 8 - 4 )";
+        String post = infixToPostfix(infix);
+        System.out.println(post);
+        String inback = postfixToInfix(post);
+        System.out.println(inback);
+
+
     }
 
 }
